@@ -103,6 +103,14 @@
   cursor: pointer;
   transition: 0.3s background;
 }
+.commentForm button[type='submit']:not(:disabled):hover {
+  background: var(--green-300);
+}
+
+.commentForm button[type='submit']:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 .footer {
   visibility: hidden;
   max-height: 0;
@@ -111,10 +119,6 @@
 .commentForm:focus-within .footer {
   visibility: visible;
   max-height: none;
-}
-
-.commentForm button[type='submit']:hover {
-  background: var(--green-300);
 }
 
 .commentsList {
